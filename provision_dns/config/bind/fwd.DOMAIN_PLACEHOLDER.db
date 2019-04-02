@@ -1,0 +1,13 @@
+$TTL 86400
+@ IN SOA primary.DOMAIN_PLACEHOLDER. root.DOMAIN_PLACEHOLDER. (
+2014112511 ;Serial
+3600 ;Refresh
+1800 ;Retry
+604800 ;Expire
+86400 ;Minimum TTL
+)
+;Name Server Information
+@ IN NS primary.DOMAIN_PLACEHOLDER.
+;IP address of Name Server
+primary IN A NAMESERVER_IPV4_ADDRESS_PLACEHOLDER
+;A – Record HostName To Ip Address

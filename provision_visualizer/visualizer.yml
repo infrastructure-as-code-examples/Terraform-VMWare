@@ -1,0 +1,27 @@
+version: "3.2"
+services:
+  web:
+    image: dockersamples/visualizer
+    environment:
+      - DNS_SERVER
+      - HOST_PORT
+    dns: "${DNS_SERVER}"
+    deploy:
+      placement:
+        constraints:
+          - node.role == manager
+      labels:
+        io.salte.vendor: "None"
+        io.salte.platform: "Docker Swarm Visualizer"
+        io.salte.platformDescription: "Demo container that displays Docker services running on a Docker Swarm in a diagram."
+        io.salte.serviceDescription: "Also this is a sample app meant for learning Docker. Running this app in production is insecure and should be avoided."
+        io.salte.costCenter: "000000"
+      replicas: 1
+      restart_policy:
+        condition: any
+    ports:
+      - "${HOST_PORT}:8080"
+    volumes:
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock

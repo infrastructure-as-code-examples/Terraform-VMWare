@@ -1,0 +1,13 @@
+$TTL 86400
+@ IN SOA primary.alpha-salte.io. root.alpha-salte.io. (
+2014112511 ;Serial
+3600 ;Refresh
+1800 ;Retry
+604800 ;Expire
+86400 ;Minimum TTL
+)
+;Name Server Information
+@ IN NS primary.alpha-salte.io.
+;IP address of Name Server
+primary IN A 192.168.1.2
+;A – Record HostName To Ip Address

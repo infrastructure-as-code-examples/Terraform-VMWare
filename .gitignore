@@ -1,0 +1,7 @@
+.terraform
+terraform.tfstate
+*.log
+variables.tf
+*.backup
+.DS_Store
+backend.config

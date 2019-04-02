@@ -1,0 +1,13 @@
+$TTL 86400
+@ IN SOA dns-01.alpha-salte.io. root.alpha-salte.io. (
+2014112511 ;Serial
+3600 ;Refresh
+1800 ;Retry
+604800 ;Expire
+86400 ;Minimum TTL
+)
+;Name Server Information
+@ IN NS dns-01.alpha-salte.io.
+;Reverse lookup for Name Server
+2 IN PTR dns-01.alpha-salte.io.
+;PTR Record IP address to HostName
